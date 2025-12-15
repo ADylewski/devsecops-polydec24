@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Bearer
+        uses: bearer/bearer-action@v2
       - run: npm install
       - name: SCA
         run: npm audit --production 
-      - name: bearer SAST
-        run: bearer scan juice-shop
       - run: npm run build
       - run: npm test
