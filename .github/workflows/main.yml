@@ -1,0 +1,2 @@
+steps:
+  -run: cat hello_world.txt
