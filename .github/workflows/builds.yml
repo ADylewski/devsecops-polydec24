@@ -7,5 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm install
+      - name: SCA
+        run: npm audit --production
       - run: npm run build
       - run: npm test
