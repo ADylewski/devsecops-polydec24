@@ -1,8 +1,9 @@
-name: Hello World
+name: hello
 on: push
+
 jobs:
-  greet:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: print stuff
-        run: cat ../hello_world.txt
+      - uses: actions/checkout@v4
+      - run: cat hello_world.txt
