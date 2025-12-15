@@ -1,2 +1,7 @@
-steps:
-  -run: cat hello_world.txt
+name: Hello World
+on: push
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+        run: cat hellow_world.txt
